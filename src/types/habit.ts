@@ -15,12 +15,24 @@ export interface HabitCompletion {
   date: string; // YYYY-MM-DD format
 }
 
+export interface HabitNote {
+  id: string;
+  habitId: string;
+  date: string;
+  note: string;
+  createdAt: Date;
+}
+
 export interface DailyStats {
   date: string;
   totalHabits: number;
   completedHabits: number;
   completionRate: number;
   streak: number;
+  perfectDays: number;
+  totalCompletions: number;
+  maxStreak: number;
+  weeklyAverage: number;
 }
 
 export type HabitCategory = 
